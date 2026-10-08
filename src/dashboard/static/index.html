@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataFlow360 | Battery Analytics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <main class="dashboard">
+        <header class="glass-panel">
+            <div class="logo">
+                <h1>DataFlow<span>360</span></h1>
+                <p>Battery Degradation Analytics</p>
+            </div>
+            <div class="controls">
+                <label for="battery-select">Select Battery</label>
+                <select id="battery-select" class="glass-select">
+                    <option value="" disabled selected>Loading...</option>
+                </select>
+            </div>
+        </header>
+
+        <div class="metrics-grid">
+            <div class="metric-card glass-panel" style="--delay: 0.1s">
+                <h3>Total Cycles</h3>
+                <div class="value" id="metric-cycles">--</div>
+            </div>
+            <div class="metric-card glass-panel" style="--delay: 0.2s">
+                <h3>Final SOH</h3>
+                <div class="value" id="metric-soh">--%</div>
+            </div>
+            <div class="metric-card glass-panel" style="--delay: 0.3s">
+                <h3>Max Capacity Fade</h3>
+                <div class="value" id="metric-fade">--%</div>
+            </div>
+            <div class="metric-card glass-panel" style="--delay: 0.4s">
+                <h3>EOL Status</h3>
+                <div class="value status" id="metric-status">--</div>
+            </div>
+        </div>
+
+        <div class="charts-grid">
+            <div class="chart-container glass-panel" style="--delay: 0.5s">
+                <h2>State of Health (SOH) Trend</h2>
+                <div class="chart-wrapper">
+                    <canvas id="sohChart"></canvas>
+                </div>
+            </div>
+            <div class="chart-container glass-panel" style="--delay: 0.6s">
+                <h2>Capacity Fade Progression</h2>
+                <div class="chart-wrapper">
+                    <canvas id="fadeChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
