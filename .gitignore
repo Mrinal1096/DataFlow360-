@@ -1,0 +1,79 @@
+# =============================================================
+# DataFlow360 — .gitignore
+# =============================================================
+
+# --------------------------
+# Python Virtual Environment
+# --------------------------
+.venv/
+venv/
+env/
+ENV/
+
+# --------------------------
+# Python Bytecode & Cache
+# --------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# --------------------------
+# Environment Variables (SECRETS — NEVER COMMIT)
+# --------------------------
+.env
+*.env
+
+# --------------------------
+# Data Files (can be large or sensitive)
+# --------------------------
+data/raw/*
+data/processed/*
+
+# Keep the folder structure in Git (but not the files inside)
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# --------------------------
+# Logs
+# --------------------------
+logs/
+*.log
+
+# --------------------------
+# Jupyter Notebooks checkpoints
+# --------------------------
+.ipynb_checkpoints/
+
+# --------------------------
+# OS & Editor Files
+# --------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+
+# --------------------------
+# IDE / Editor Specific
+# --------------------------
+.vscode/
+.idea/
+*.code-workspace
+
+# --------------------------
+# Distribution / Build
+# --------------------------
+dist/
+build/
+*.egg-info/
+*.egg
+
+# --------------------------
+# Testing & Coverage
+# --------------------------
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
